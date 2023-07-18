@@ -1,46 +1,96 @@
 @use "../../sassStyle/variable.scss" as *;
 
-@media screen and (min-width: 1280px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background: url("../../assets/img/bg-large.jpg");
+  position: relative;
+  z-index: 10;
+
+  &__logo {
+    width: 9rem;
+    height: 2.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__lang {
+    font-family: Netflix-heading;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $white;
+    border-radius: 0.3rem;
+    width: 6.4rem;
+    height: 3.2rem;
+
+    background: url(../../assets/logo/lang-icon.svg) no-repeat 1rem;
+
+    select {
+      opacity: 0;
+      color: $white;
+      width: 100%;
+      height: 100%;
+      font-family: $netflix-font;
+      font-weight: 600;
+      font-size: 1.6rem;
+      border: none;
+
+      outline: none;
+      background: transparent;
+      appearance: none;
+      text-align: center;
+    }
+  }
+
+  button[type="button"] {
+    font-family: $netflix-font;
+    font-size: 1.6rem;
+
+    background: $red;
+    color: $white;
+    border: 1px solid $red;
+    border-radius: 0.3rem;
+    margin-left: 0.8rem;
+    width: 6rem;
+    height: 3.2rem;
+    cursor: pointer;
+
+    transition: $hover-effect;
+
+    &:hover {
+      transition: $hover-effect;
+      background: $red-hover;
+    }
+  }
+}
+
+@media screen and (min-width: 599.99px) {
+  .navbar {
+    &__lang {
+      width: 15rem;
+
+      select {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 959.99px) {
+  .navbar {
     &__logo {
       width: 15rem;
       height: 4rem;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
 
-    &__lang {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      border: 1px solid $white;
-      border-radius: 1rem;
-      width: 140px;
-      height: 40px;
-
-      background: url(../../assets/logo/lang-icon.svg) no-repeat 1rem;
-
-      select {
-        color: $white;
-
-        width: 100%;
-        height: 100%;
-
-        border: none;
-
-        outline: none;
-        background: transparent;
-        appearance: none;
-        text-align: center;
-      }
+    button[type="button"] {
+      margin-left: 2rem;
     }
   }
 }

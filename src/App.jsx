@@ -1,11 +1,5 @@
-import {
-  Navbar,
-  Main,
-  ArticleImage,
-  ArticleVideo,
-  FAQ,
-  Footer,
-} from "./components";
+import { Main } from "./components";
+import MainPage from "./pages/mainPage/MainPage";
 
 import "./sassStyle/app.scss";
 import "./sassStyle/index.scss";
@@ -13,8 +7,7 @@ import "./sassStyle/index.scss";
 function App() {
   return (
     <div className="margin padding width">
-      <Navbar />
-      <Main />
+      <MainPage />
     </div>
   );
 }

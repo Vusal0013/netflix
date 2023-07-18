@@ -4,7 +4,7 @@ import langLogo from "../../assets/logo/lang-icon.svg";
 import "./navbar.scss";
 import "../../sassStyle/custom.scss";
 
-const Navbar = () => {
+const Navbar = ({ signin }) => {
   return (
     <div className="navbar">
       <div className="navbar__logo">
@@ -17,7 +17,7 @@ const Navbar = () => {
             <option value="Russian">Russian</option>
           </select>
         </div>
-        <button type="button"></button>
+        <button type="button">{signin}</button>
       </div>
     </div>
   );
