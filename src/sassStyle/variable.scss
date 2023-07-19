@@ -9,11 +9,3 @@ $footer-color-hover: #ffffffcc;
 
 /*Animation*/
 $hover-effect: 250ms cubic-bezier(0.5, 0, 0.1, 1) 0s;
-
-/*Fonts*/
-$netflix-font: "Netflix-font";
-
-@font-face {
-  font-family: $netflix-font;
-  src: url("../assets/fonts/netflix-font.woff2"), format("wolf2");
-}

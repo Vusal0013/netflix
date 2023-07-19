@@ -1,9 +1,11 @@
+@use "./variable.scss" as *;
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
+  font-family: sans-serif;
 }
 
 body {
@@ -12,8 +14,6 @@ body {
   padding: 0;
 }
 
-@media screen and (max-width: 1280px) {
-}
-
-@media screen and (min-width: 960px) {
+p {
+  font-size: 18px;
 }

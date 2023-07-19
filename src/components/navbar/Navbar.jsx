@@ -10,7 +10,7 @@ const Navbar = ({ signin }) => {
       <div className="navbar__logo">
         <img src={netflixLogo} alt="Netflix-logo" />
       </div>
-      <div className="d-flex justify-center align-center">
+      <div className="navbar__lang-container">
         <div className="navbar__lang">
           <select name="language" id="language">
             <option value="English">English</option>

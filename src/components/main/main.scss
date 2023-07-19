@@ -1,0 +1,51 @@
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+  }
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: no-repeat center top url("../../assets/img/bg-small.jpg");
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    transform: scale(1.25) translateY(-10%);
+  }
+
+  &__shadow-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    width: 100%;
+    height: 100%;
+  }
+}
