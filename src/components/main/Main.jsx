@@ -1,6 +1,8 @@
 import React from "react";
 import "./main.scss";
 import Subscribe from "../subscribe/Subscribe";
+import backgroundImage from "../../assets/img/bg-small.jpg";
+import ArticlePartition from "../articlePartition/ArticlePartition";
 
 const Main = ({ title, paragraph }) => {
   return (
@@ -14,8 +16,15 @@ const Main = ({ title, paragraph }) => {
           button="Get Started"
         />
       </div>
-      <div className="main__bg-image"></div>
+      <div className="main__bg-image">
+        <img
+          className="main__bg-image__background-image"
+          src={backgroundImage}
+          alt="background-image"
+        />
+      </div>
       <div className="main__shadow-cover"></div>
+      <ArticlePartition />
     </div>
   );
 };

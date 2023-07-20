@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 46rem;
 
   overflow: hidden;
 
@@ -14,38 +14,77 @@
     align-items: center;
     flex-direction: column;
 
+    padding: 10rem 4rem 4rem;
+
     z-index: 1;
 
     width: 100%;
     height: 100%;
 
     color: #fff;
+
+    & > h1 {
+      margin: 0;
+      text-align: center;
+      line-height: 3.6rem;
+    }
+    & p,
+    h3 {
+      margin: 0;
+      margin-top: 2.2rem;
+      text-align: center;
+      color: #ddd;
+    }
+
+    & h3 {
+      line-height: 2.8rem;
+    }
   }
   &__bg-image {
     position: absolute;
     top: 0;
     left: 0;
-    background: no-repeat center top url("../../assets/img/bg-small.jpg");
-    background-size: cover;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    right: 0;
 
-    transform: scale(1.25) translateY(-10%);
+    &__background-image {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-
   &__shadow-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-
     background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.8) 0,
       rgba(0, 0, 0, 0) 60%,
       rgba(0, 0, 0, 0.8) 100%
     );
-    width: 100%;
-    height: 100%;
+
+    background-color: rgb(0 0 0 / 40%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
+}
+
+@media screen and (min-width: 599.99px) {
+  .main {
+    min-height: 50rem;
+
+    &__content {
+      padding: 14rem 4rem 4rem;
+    }
+    &__bg-image {
+      transform: scale(1.25) translateY(-10%);
+      &__background-image {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 959.99px) {
 }

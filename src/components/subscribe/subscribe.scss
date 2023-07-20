@@ -5,32 +5,31 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
   &__form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    > div {
-      width: 100%;
-    }
-
     &__container {
       display: flex;
-      flex-direction: row;
-      align-content: center;
+      flex-direction: column;
       width: 100%;
     }
 
     &__email-container {
-      flex: 2;
+      // flex: 2;
       position: relative;
+
+      margin-top: 2.5rem;
 
       &__email {
         width: 100%;
-        padding: 24px 16px 8px;
+        padding: 24px 20px 8px;
         border: 1px solid #aaa;
         border-radius: 0.5rem;
+        font-size: 1.6rem;
 
         background: rgba(22, 22, 22, 0.7);
         color: #fff;
@@ -39,14 +38,16 @@
           outline: 2px solid #fff;
         }
       }
-      &__email:focus + &__email-placeholder {
+
+      &__email:focus + &__email-placeholder,
+      &__email + &__email-placeholder.placeholderTop {
         font-size: 12px;
         transform: translateY(-135%);
       }
 
       &__email-placeholder {
         position: absolute;
-        padding-left: 16px;
+        padding-left: 20px;
         color: rgba(255, 255, 255, 0.7);
         top: 50%;
         left: 0;
@@ -59,9 +60,47 @@
     }
 
     &__button {
-      flex: 1;
+      // flex: 1;
       padding: 12px 24px;
-      margin-left: 1rem;
+      // margin-left: 1rem;
+
+      margin-top: 2rem;
+
+      cursor: pointer;
+      width: max-content;
+      align-self: center;
+
+      background: $red;
+      color: $white;
+      font-size: 2.2rem;
+
+      border: none;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: $red-hover;
+      }
     }
   }
+}
+@media screen and (min-width: 599.99px) {
+  .subscribe {
+    &__form {
+      &__container {
+        flex-direction: row;
+      }
+
+      &__email-container {
+        flex: 2;
+
+        &__button {
+          flex: 1;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 959.99px) {
 }

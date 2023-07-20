@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./subscribe.scss";
 
 const Subscribe = ({ title, placeholder, button }) => {
+  const [email, setEmail] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   return (
     <div className="subscribe">
       <form className="subscribe__form">
-        <p>{title}</p>
+        <h3>{title}</h3>
         <div className="subscribe__form__container">
           <div className="subscribe__form__email-container">
             <input
@@ -13,10 +19,13 @@ const Subscribe = ({ title, placeholder, button }) => {
               type="email"
               name="email"
               id="email"
+              onChange={(e) => handleEmailChange(e)}
             />
             <label
               htmlFor="email"
-              className="subscribe__form__email-container__email-placeholder"
+              className={`subscribe__form__email-container__email-placeholder ${
+                email ? "placeholderTop" : ""
+              }`}
             >
               {placeholder}
             </label>
