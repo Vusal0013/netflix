@@ -1,6 +1,8 @@
 import React from "react";
+import "./ArticleImage.scss";
 
 const ArticleImage = ({ title, subtitle, png, ...props }) => {
+  console.log(props);
   return (
     <div className="article-image">
       <div className="article-image__title-container">
@@ -15,7 +17,7 @@ const ArticleImage = ({ title, subtitle, png, ...props }) => {
           alt="Article-photo"
         />
 
-        {props && (
+        {Object.keys(props).length ? (
           <div className="article-image__image-container__download-container">
             <div className="article-image__image-container__download-container__image-container">
               <img
@@ -33,6 +35,8 @@ const ArticleImage = ({ title, subtitle, png, ...props }) => {
             </div>
             <div className="article-image__image-container__download-container__download-png"></div>
           </div>
+        ) : (
+          ""
         )}
       </div>
     </div>

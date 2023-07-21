@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.scss";
 import Subscribe from "../subscribe/Subscribe";
-import backgroundImage from "../../assets/img/bg-small.jpg";
+import mainBackground from "../../assets/img/main-background.jpg";
 import ArticlePartition from "../articlePartition/ArticlePartition";
 
 const Main = ({ title, paragraph }) => {
@@ -19,11 +19,12 @@ const Main = ({ title, paragraph }) => {
       <div className="main__bg-image">
         <img
           className="main__bg-image__background-image"
-          src={backgroundImage}
+          src={mainBackground}
           alt="background-image"
         />
       </div>
       <div className="main__shadow-cover"></div>
+
       <ArticlePartition />
     </div>
   );

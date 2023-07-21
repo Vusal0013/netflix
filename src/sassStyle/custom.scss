@@ -10,6 +10,20 @@
   align-items: center;
 }
 
-.ml-1 {
-  margin-left: 1rem;
+.margin {
+  margin: auto;
+}
+
+.padding {
+  padding: 2rem;
+}
+
+.width {
+  max-width: 75%;
+}
+
+@media screen and (max-width: 1280px) {
+  .width {
+    max-width: 100%;
+  }
 }

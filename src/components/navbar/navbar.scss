@@ -5,7 +5,9 @@
   justify-content: space-between;
   align-items: center;
 
-  position: relative;
+  margin: 2rem;
+  width: calc(100% - 4rem);
+  position: absolute;
   z-index: 10;
 
   &__logo {
@@ -99,5 +101,12 @@
     button[type="button"] {
       margin-left: 2rem;
     }
+  }
+}
+@media screen and (min-width: 1279.99px) {
+  .navbar {
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
