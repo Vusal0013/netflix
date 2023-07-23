@@ -46,6 +46,7 @@ const articleDataEng = {
         "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.",
       png: devicePilePng,
       video: videoDevicePile,
+      customClassNameForVideo: "video-device-pile",
     },
     {
       title: "Create profiles for kids",

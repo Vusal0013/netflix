@@ -16,13 +16,12 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+      margin-top: 2.5rem;
     }
 
     &__email-container {
       // flex: 2;
       position: relative;
-
-      margin-top: 2.5rem;
 
       &__email {
         width: 100%;
@@ -92,11 +91,11 @@
 
       &__email-container {
         flex: 2;
-
-        &__button {
-          flex: 1;
-          margin-left: 1rem;
-        }
+      }
+      &__button {
+        flex: 1;
+        margin-top: 0;
+        margin-left: 1rem;
       }
     }
   }

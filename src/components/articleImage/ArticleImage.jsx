@@ -1,46 +1,89 @@
 import React from "react";
+import { ArticlePartition } from "../";
+
 import "./ArticleImage.scss";
 
-const ArticleImage = ({ title, subtitle, png, ...props }) => {
-  console.log(props);
-  return (
-    <div className="article-image">
-      <div className="article-image__title-container">
-        <h1 className="article-image__title-container__title">{title}</h1>
-        <p className="article-image__title-container__subtitle">{subtitle}</p>
-      </div>
+const ArticleImage = ({
+  title,
+  subtitle,
+  png,
+  video,
+  downloadBar,
+  customClassNameForVideo,
+}) => {
+  if (video) {
+    return (
+      <div className="article">
+        <div className="article__title-container">
+          <h2 className="article__title-container__title">{title}</h2>
+          <p className="article__title-container__subtitle">{subtitle}</p>
+        </div>
 
-      <div className="article-image__image-container">
-        <img
-          className="article-image__image-container__image"
-          src={png}
-          alt="Article-photo"
-        />
-
-        {Object.keys(props).length ? (
-          <div className="article-image__image-container__download-container">
-            <div className="article-image__image-container__download-container__image-container">
-              <img
-                src={props?.downloadingPng}
-                className="article-image__image-container__download-container__image-container__image"
-              />
-            </div>
-            <div className="article-image__image-container__download-container__title-container">
-              <div className="article-image__image-container__download-container__title-container__title">
-                {props?.title}
-              </div>
-              <div className="article-image__image-container__download-container__title-container__subtitle">
-                {props?.subtitle}
-              </div>
-            </div>
-            <div className="article-image__image-container__download-container__download-png"></div>
+        <div className="article__image-container">
+          <img
+            className="article__image-container__image"
+            src={png}
+            alt="Article-photo"
+          />
+          <div
+            className={`article__image-container__${
+              customClassNameForVideo ? customClassNameForVideo : "video"
+            }`}
+          >
+            <video
+              src={video}
+              type="video/m4v"
+              autoPlay
+              muted
+              loop
+              playsInline
+            ></video>
           </div>
-        ) : (
-          ""
-        )}
+        </div>
+        <ArticlePartition />
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="article photo">
+        <div className="article__title-container">
+          <h2 className="article__title-container__title">{title}</h2>
+          <p className="article__title-container__subtitle">{subtitle}</p>
+        </div>
+
+        <div className="article__image-container">
+          <img
+            className="article__image-container__image"
+            src={png}
+            alt="Article-photo"
+          />
+
+          {downloadBar && (
+            <div className="article__image-container__download-container">
+              <div className="article__image-container__download-container__image-container">
+                <img
+                  src={downloadBar?.png}
+                  className="article__image-container__download-container__image-container__image"
+                />
+              </div>
+              <div className="article__image-container__download-container__title-container">
+                <div className="article__image-container__download-container__title-container__title">
+                  {downloadBar?.title}
+                </div>
+                <div className="article__image-container__download-container__title-container__subtitle">
+                  {downloadBar?.subtitle}
+                </div>
+              </div>
+              <div className="article__image-container__download-container__download-png">
+                <img src={downloadBar?.gif} alt="gif-animation" />
+              </div>
+            </div>
+          )}
+        </div>
+        <ArticlePartition />
+      </div>
+    );
+  }
 };
 
 export default ArticleImage;

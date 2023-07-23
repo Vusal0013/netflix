@@ -12,17 +12,24 @@ import { articleDataEng } from "../../assets/data/articleData";
 
 const MainPage = () => {
   return (
-    <div style={{ height: "2000px" }}>
+    <div key={"MainPage"}>
       <Navbar signin="Sign in" />
       <Main
         title="Unlimited movies, TV shows, and more"
         paragraph="Watch anywhere. Cancel anytime."
       />
-      <ArticleImage
-        png={articleDataEng.articles[3].png}
-        title={articleDataEng.articles[3].title}
-        subtitle={articleDataEng.articles[3].subtitle}
-      />
+
+      {articleDataEng.articles.map((item, i) => (
+        <ArticleImage
+          png={item.png}
+          title={item.title}
+          subtitle={item.subtitle}
+          video={item.video}
+          downloadBar={item.downloadBar}
+          key={i + 1}
+          customClassNameForVideo={item.customClassNameForVideo}
+        />
+      ))}
     </div>
   );
 };

@@ -1,3 +1,149 @@
-.article-image {
+@use "../../sassStyle/variable.scss" as *;
+.article {
+  position: relative;
   min-height: 46rem;
+  background: transparent;
+  color: $white;
+  text-align: start;
+  padding: 4.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+
+  margin: 0 3rem;
+
+  h2 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  &__title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title,
+    &__subtitle {
+      width: 100%;
+      text-align: start;
+    }
+  }
+
+  &__image-container {
+    z-index: 1;
+    position: relative;
+
+    &__download-container {
+      position: absolute;
+      display: flex;
+
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      border: 1px solid#fff;
+      border-radius: 1rem;
+      padding: 1rem;
+
+      height: 10rem;
+      width: 65%;
+      background: rgba(0, 0, 0, 0.9);
+
+      &__image-container {
+        height: 100%;
+        margin-right: 2rem;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      &__title-container {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+          color: $white;
+          font-weight: 600;
+        }
+        &__subtitle {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: #0071eb;
+        }
+      }
+
+      &__download-png {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 65%;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__video {
+      overflow: hidden;
+      z-index: -1;
+      position: absolute;
+      width: 75%;
+      top: 20%;
+      left: 13.2%;
+
+      video {
+        width: 100%;
+      }
+    }
+
+    &__video-device-pile {
+      width: 62%;
+      overflow: hidden;
+      z-index: -1;
+      position: absolute;
+      top: 11%;
+      left: 19%;
+
+      video {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 959.99px) {
+  .article.photo {
+    flex-direction: row-reverse;
+  }
+
+  .article {
+    flex-direction: row;
+
+    &__title-container,
+    &__image-container {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1279.99px) {
+  .article {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
 }
