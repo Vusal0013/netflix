@@ -4,23 +4,13 @@
   min-height: 46rem;
   background: transparent;
   color: $white;
-  text-align: start;
-  padding: 4.5rem 0;
+  text-align: center;
+  padding: 46px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 1;
-
-  margin: 0 3rem;
-
-  h2 {
-    font-size: 48px;
-  }
-
-  p {
-    font-size: 24px;
-  }
 
   &__title-container {
     display: flex;
@@ -31,7 +21,6 @@
     &__title,
     &__subtitle {
       width: 100%;
-      text-align: start;
     }
   }
 
@@ -49,16 +38,19 @@
       margin: auto;
 
       border: 1px solid#fff;
-      border-radius: 1rem;
-      padding: 1rem;
+      border-radius: 10px;
+      padding: 2px;
 
-      height: 10rem;
-      width: 65%;
+      text-align: start;
+
+      height: 64px;
+      width: 80%;
       background: rgba(0, 0, 0, 0.9);
 
       &__image-container {
+        overflow: hidden;
         height: 100%;
-        margin-right: 2rem;
+        margin-right: 10px;
 
         img {
           height: 100%;
@@ -74,9 +66,10 @@
         &__title {
           color: $white;
           font-weight: 600;
+          font-size: 14px;
         }
         &__subtitle {
-          font-size: 1.4rem;
+          font-size: 12px;
           font-weight: 400;
           color: #0071eb;
         }
@@ -88,7 +81,7 @@
         align-items: center;
 
         img {
-          height: 65%;
+          height: 80%;
         }
       }
     }
@@ -125,17 +118,41 @@
   }
 }
 
+@media screen and (min-width: 599.99px) {
+  .article {
+    &__image-container {
+      &__download-container {
+        height: 96px;
+        width: 65%;
+
+        padding: 6px;
+        &__download-png {
+          img {
+            height: 65%;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (min-width: 959.99px) {
   .article.photo {
     flex-direction: row-reverse;
   }
 
   .article {
+    text-align: start;
+
     flex-direction: row;
 
     &__title-container,
     &__image-container {
       width: 50%;
+      &__download-container {
+        &__image-container {
+          margin-right: 15px;
+        }
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import netflixLogo from "../../assets/logo/netflix-logo.svg";
-import langLogo from "../../assets/logo/lang-icon.svg";
+import Language from "../language/Language";
 import "./navbar.scss";
 import "../../sassStyle/custom.scss";
 
@@ -11,12 +11,7 @@ const Navbar = ({ signin }) => {
         <img src={netflixLogo} alt="Netflix-logo" />
       </div>
       <div className="navbar__lang-container">
-        <div className="navbar__lang">
-          <select name="language" id="language">
-            <option value="English">English</option>
-            <option value="Russian">Russian</option>
-          </select>
-        </div>
+        <Language />
         <button type="button">{signin}</button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Navbar from "./navbar/Navbar";
+import Language from "./language/Language";
 import Main from "./main/Main";
 import ArticleImage from "./articleImage/ArticleImage";
 import ArticleVideo from "./articleVideo/ArticleVideo";
@@ -8,6 +9,7 @@ import ArticlePartition from "./articlePartition/ArticlePartition";
 
 export {
   Navbar,
+  Language,
   Main,
   ArticleImage,
   ArticleVideo,

@@ -5,14 +5,14 @@
   justify-content: space-between;
   align-items: center;
 
-  margin: 2.5rem 3rem 0;
-  width: calc(100% - 6rem);
+  margin: 24px 32px 0;
+  width: calc(100% - 64px);
   position: absolute;
   z-index: 10;
 
   &__logo {
-    width: 9rem;
-    height: 2.5rem;
+    width: 89px;
+    height: 24px;
 
     img {
       width: 100%;
@@ -26,48 +26,48 @@
     align-items: center;
   }
 
-  &__lang {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    border: 1px solid $white;
-    border-radius: 0.5rem;
-    width: 6.4rem;
-    height: 3.2rem;
+  // &__lang {
+  //   position: relative;
+  //   display: flex;
+  //   justify-content: center;
+  //   border: 1px solid $white;
+  //   border-radius: 5px;
+  //   width: 64px;
+  //   height: 32px;
 
-    background: url(../../assets/logo/lang-icon.svg) no-repeat 1rem;
+  //   background: url(../../assets/logo/lang-icon.svg) no-repeat 1rem;
 
-    & > select:focus {
-      outline: 2px solid $white;
-      border-radius: 0.5rem;
-    }
-    select {
-      cursor: pointer;
-      opacity: 0;
-      color: $white;
-      width: 100%;
-      height: 100%;
-      font-weight: 600;
-      font-size: 1.6rem;
-      border: none;
+  //   & > select:focus {
+  //     outline: 2px solid $white;
+  //     border-radius: 5px;
+  //   }
+  //   select {
+  //     cursor: pointer;
+  //     opacity: 0;
+  //     color: $white;
+  //     width: 100%;
+  //     height: 100%;
+  //     font-weight: 600;
+  //     font-size: 16px;
+  //     border: none;
 
-      outline: none;
-      background: transparent;
-      appearance: none;
-      text-align: center;
-    }
-  }
+  //     outline: none;
+  //     background: transparent;
+  //     appearance: none;
+  //     text-align: center;
+  //   }
+  // }
 
   button[type="button"] {
-    font-size: 1.4rem;
+    font-size: 14px;
 
     background: $red;
     color: $white;
     border: 1px solid $red;
-    border-radius: 0.5rem;
-    margin-left: 0.8rem;
-    width: 6rem;
-    height: 3.2rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 60px;
+    height: 32px;
     cursor: pointer;
 
     transition: $hover-effect;
@@ -79,13 +79,14 @@
   }
 }
 
-@media screen and (min-width: 599.99px) {
+@media screen and (max-width: 599px) {
   .navbar {
-    &__lang {
-      width: 15rem;
+    .lang {
+      width: 32px;
+      background-position: center;
 
       select {
-        opacity: 1;
+        opacity: 0;
       }
     }
   }
@@ -93,13 +94,12 @@
 
 @media screen and (min-width: 959.99px) {
   .navbar {
-    &__logo {
-      width: 15rem;
-      height: 4rem;
-    }
-
     button[type="button"] {
-      margin-left: 2rem;
+      margin-left: 20px;
+    }
+    &__logo {
+      width: 148px;
+      height: 40px;
     }
   }
 }
