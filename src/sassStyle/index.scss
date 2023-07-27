@@ -1,22 +1,26 @@
 @use "./variable.scss" as *;
+@use "./fonts.scss";
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
-  font-family: sans-serif;
 }
 
 body {
+  font-family: Netflix sans;
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
   background: #000;
+  color: $white;
 }
 
 h1,
 h2 {
+  font-family: Netflix sans;
+  font-weight: 900;
   font-size: 3.2rem;
 }
 
@@ -26,6 +30,7 @@ h3 {
 
 p {
   font-size: 1.4rem;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 959.99px) {

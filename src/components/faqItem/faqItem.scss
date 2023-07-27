@@ -1,0 +1,58 @@
+@use "../../sassStyle/variable.scss" as *;
+
+.faq-item {
+  margin-bottom: 0.5rem;
+  &__heading {
+    background: $gray;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.6rem;
+
+    transition: all $hover-effect;
+
+    &:hover {
+      background-color: $gray-hover;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+    }
+    &__icon {
+      font-size: 4rem;
+      font-weight: 200;
+      line-height: 0;
+      transition: all $hover-effect;
+    }
+
+    &__icon.show {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__content {
+    margin-top: 0;
+    background: $gray;
+
+    padding: 0 1.6rem;
+    max-height: 0;
+
+    transition: all $hover-effect;
+    overflow: hidden;
+
+    p {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+  }
+
+  &__content.show {
+    margin-top: 0.125rem;
+    padding: 1.6rem;
+    max-height: 75rem;
+  }
+}

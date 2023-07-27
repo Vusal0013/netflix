@@ -59,4 +59,4 @@ const articleDataEng = {
 
 const articleDataRus = {};
 
-export { articleDataEng };
+export { articleDataEng, articleDataRus };

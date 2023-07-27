@@ -8,7 +8,7 @@ import {
   Footer,
 } from "../../components";
 
-import { articleDataEng } from "../../assets/data/articleData";
+import { articleDataEng } from "../../assets/data";
 
 const MainPage = () => {
   return (
@@ -30,6 +30,8 @@ const MainPage = () => {
           customClassNameForVideo={item.customClassNameForVideo}
         />
       ))}
+
+      <FAQ />
     </div>
   );
 };
