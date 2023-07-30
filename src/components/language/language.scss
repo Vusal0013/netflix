@@ -35,3 +35,13 @@
     }
   }
 }
+@media screen and (max-width: 599px) {
+  .lang.navbar-lang-icon {
+    width: 32px;
+    background-position: center;
+
+    select {
+      opacity: 0;
+    }
+  }
+}

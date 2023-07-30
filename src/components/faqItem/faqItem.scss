@@ -35,13 +35,13 @@
   }
 
   &__content {
-    margin-top: 0;
     background: $gray;
 
+    transition: all $hover-effect;
+    margin-top: 0;
     padding: 0 1.6rem;
     max-height: 0;
 
-    transition: all $hover-effect;
     overflow: hidden;
 
     p {

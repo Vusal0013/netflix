@@ -1,26 +1,18 @@
 import React from "react";
-import {
-  Navbar,
-  Main,
-  ArticleImage,
-  ArticleVideo,
-  FAQ,
-  Footer,
-} from "../../components";
-
-import { articleDataEng } from "../../assets/data";
+import { Navbar, Main, Article, FAQ, Footer } from "../../components";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
+  const { t } = useTranslation();
+  const data = t("translation", { returnObjects: true });
+
   return (
     <div key={"MainPage"}>
-      <Navbar signin="Sign in" />
-      <Main
-        title="Unlimited movies, TV shows, and more"
-        paragraph="Watch anywhere. Cancel anytime."
-      />
+      <Navbar signin={data.main.navbar.login} />
+      <Main title={data.main.title} paragraph={data.main.subtitle} />
 
-      {articleDataEng.articles.map((item, i) => (
-        <ArticleImage
+      {data.articles.map((item, i) => (
+        <Article
           png={item.png}
           title={item.title}
           subtitle={item.subtitle}
@@ -30,8 +22,8 @@ const MainPage = () => {
           customClassNameForVideo={item.customClassNameForVideo}
         />
       ))}
-
       <FAQ />
+      <Footer />
     </div>
   );
 };

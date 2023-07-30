@@ -1,11 +1,11 @@
 .faq {
-  // display: flex;
-  // justify-content: center;
+  position: relative;
   width: 100%;
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem 2rem 4rem;
 
     width: 100%;
     &__title {
@@ -13,7 +13,18 @@
     }
 
     &__faq-items {
-      width: 75%;
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1279.99px) {
+  .faq {
+    &__content {
+      &__faq-items {
+        width: 75%;
+      }
     }
   }
 }

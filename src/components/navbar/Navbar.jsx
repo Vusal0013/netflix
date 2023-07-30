@@ -11,7 +11,7 @@ const Navbar = ({ signin }) => {
         <img src={netflixLogo} alt="Netflix-logo" />
       </div>
       <div className="navbar__lang-container">
-        <Language />
+        <Language classnameForNavbar="navbar-lang-icon" />
         <button type="button">{signin}</button>
       </div>
     </div>

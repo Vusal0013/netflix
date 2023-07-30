@@ -3,17 +3,20 @@ import "./main.scss";
 import Subscribe from "../subscribe/Subscribe";
 import mainBackground from "../../assets/img/main-background.jpg";
 import ArticlePartition from "../articlePartition/ArticlePartition";
+import { useTranslation } from "react-i18next";
 
 const Main = ({ title, paragraph }) => {
+  const { t } = useTranslation();
+  const data = t("translation", { returnObjects: true });
   return (
     <div className="main">
       <div className="main__content">
         <h1>{title}</h1>
         <p>{paragraph}</p>
         <Subscribe
-          title="Ready to watch? Enter your email to create or restart your membership."
-          placeholder="Email adress"
-          button="Get Started"
+          title={data.subscribe.title}
+          placeholder={data.subscribe.placeholder}
+          button={data.subscribe.button}
         />
       </div>
       <div className="main__bg-image">
