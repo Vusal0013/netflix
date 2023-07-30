@@ -1,0 +1,62 @@
+@use "../../sassStyle/variable.scss" as *;
+
+.footer {
+  padding: 1rem 2rem 4rem;
+  width: 100%;
+  a {
+    color: $footer-color;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  &__container {
+    width: 100%;
+
+    .copyright {
+      font-size: 14px;
+      padding: 1rem 0;
+      color: $footer-color;
+    }
+
+    .lang {
+      margin: 1rem 0;
+    }
+    &__heading {
+      padding: 1rem 0;
+      width: 100%;
+      text-align: start;
+      a {
+        font-size: 16px;
+      }
+    }
+
+    &__content {
+      padding: 1rem 0;
+      width: 100%;
+      &__list {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 20%));
+        gap: 1rem;
+
+        padding: 1rem 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1279.99px) {
+  .footer {
+    &__container {
+      width: 75%;
+    }
+  }
+}
