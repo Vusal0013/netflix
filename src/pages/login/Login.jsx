@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { netflixLogo } from "../../assets/logo";
 import { loginPgBackground } from "../../assets/img";
-import { ArticlePartition, Footer, InputEmail } from "../../components";
+import { Footer } from "../../components";
 
 import "./login.scss";
 
 import * as Yup from "yup";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 
 import { Link } from "react-router-dom";
 import {
@@ -14,6 +14,7 @@ import {
   Checkbox,
   GooglePrivacy,
   InputPassword,
+  InputEmail,
 } from "../../components/form";
 
 import { useTranslation } from "react-i18next";
