@@ -1,0 +1,125 @@
+.input-container {
+  position: relative;
+
+  padding-bottom: 16px;
+
+  .password-visibility {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .phone-prefix {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    padding-top: 23px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: pointer;
+    color: #737373;
+
+    &__prefix-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__country-flag {
+      width: 20px;
+      display: flex;
+    }
+    &__list {
+      position: absolute;
+      left: 0;
+      height: 350px;
+      cursor: pointer;
+      width: 100%;
+      overflow-y: scroll;
+
+      z-index: 10;
+      background-color: #595959;
+      padding: 16px;
+
+      &.hidden {
+        display: none;
+      }
+
+      li {
+        padding: 10px 16px;
+        border-radius: 6px;
+        &:hover {
+          background-color: #737373;
+        }
+
+        &.selected {
+          background-color: #737373;
+        }
+      }
+    }
+  }
+
+  &__input {
+    &.input-error {
+      border: 1px solid #eb3942;
+    }
+
+    width: 100%;
+    padding: 24px 20px 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+
+    background: rgba(22, 22, 22, 0.7);
+    color: #fff;
+
+    &:focus {
+      outline: 2px solid #fff;
+    }
+  }
+
+  &__input:-webkit-auto-fill {
+    background: black;
+  }
+
+  &__input:focus + &__label,
+  &__input + &__label.label-top {
+    font-size: 12px;
+    transform: translateY(-135%);
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 150ms cubic-bezier(0.9, 0, 0.51, 1);
+    cursor: text;
+
+    user-select: none;
+  }
+}
+
+@media screen and (min-width: 599.99px) {
+  .input-container {
+    flex: 2;
+  }
+}

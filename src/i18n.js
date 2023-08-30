@@ -21,7 +21,6 @@ i18n
   .use(LanguageDetector)
   .init({
     resources,
-    //   lng: "en", // Başlangıçta kullanılacak dil
     fallbackLng: "en", // Desteklenmeyen bir dil anahtarında kullanılacak dil
     interpolation: {
       escapeValue: false,

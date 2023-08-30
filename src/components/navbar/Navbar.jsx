@@ -3,6 +3,7 @@ import netflixLogo from "../../assets/logo/netflix-logo.svg";
 import Language from "../language/Language";
 import "./navbar.scss";
 import "../../sassStyle/custom.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ signin }) => {
   return (
@@ -11,8 +12,10 @@ const Navbar = ({ signin }) => {
         <img src={netflixLogo} alt="Netflix-logo" />
       </div>
       <div className="navbar__lang-container">
-        <Language classnameForNavbar="navbar-lang-icon" />
-        <button type="button">{signin}</button>
+        <Language classnameForNavbar={true} />
+        <Link className="navbar__lang-container__button-container" to="/login">
+          <button type="button">{signin}</button>
+        </Link>
       </div>
     </div>
   );
