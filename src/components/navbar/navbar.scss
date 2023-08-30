@@ -24,25 +24,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  button[type="button"] {
-    font-size: 14px;
+    &__button-container {
+      display: flex;
+      color: unset;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
 
-    background: $red;
-    color: $white;
-    border: 1px solid $red;
-    border-radius: 5px;
-    margin-left: 10px;
-    width: 60px;
-    height: 32px;
-    cursor: pointer;
+      button[type="button"] {
+        font-size: 14px;
 
-    transition: $hover-effect;
+        background: $red;
+        color: $white;
+        border: 1px solid $red;
+        border-radius: 5px;
+        margin-left: 10px;
+        width: 60px;
+        height: 32px;
+        cursor: pointer;
 
-    &:hover {
-      transition: $hover-effect;
-      background: $red-hover;
+        text-decoration: none;
+
+        transition: $hover-effect;
+
+        &:hover {
+          transition: $hover-effect;
+          background: $red-hover;
+        }
+      }
     }
   }
 }
