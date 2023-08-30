@@ -3,12 +3,17 @@
   position: relative;
   display: flex;
   justify-content: center;
-  border: 1px solid $white;
+  border: 1px solid #737373;
   border-radius: 5px;
   width: 110px;
   height: 32px;
 
-  background: url(../../assets/logo/lang-icon.svg) no-repeat 10px;
+  &__svg {
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
 
   & > select:focus {
     outline: 2px solid $white;
