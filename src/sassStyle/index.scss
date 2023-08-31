@@ -38,10 +38,12 @@ ul {
   padding: 0;
   margin: 0;
 }
-a {
-  color: unset;
-  text-decoration: none;
+
+input:autofill,
+input:-webkit-autofill {
+  transition: all 86400s;
 }
+
 @media screen and (min-width: 959.99px) {
   html {
     font-size: 15px;

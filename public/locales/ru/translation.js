@@ -19,12 +19,6 @@ const translation = {
       },
     },
 
-    subscribe: {
-      title:
-        "Готовы смотреть? Введите адрес электронной почты, чтобы оформить или возобновить подписку.",
-      placeholder: "Адрес электронной почты",
-      button: "Начать смотреть",
-    },
     articles: [
       {
         title: "Смотрите на телевизоре",
@@ -126,23 +120,31 @@ const translation = {
         {
           title: "Распространенные вопросы",
           link: "https://help.netflix.com/support/412",
+          required: true,
         },
-        { title: "Центр поддержки", link: "https://media.netflix.com/" },
+        { title: "Медиацентр", link: "https://media.netflix.com/" },
         { title: "Способы просмотра", link: "https://www.netflix.com/watch" },
         {
           title: "Настройки файлов cookie",
           link: "https://www.netflix.com/az-ru/#",
+          required: true,
         },
         { title: "Проверка скорости", link: "https://fast.com/" },
-        { title: "Центр поддержки", link: "https://help.netflix.com/" },
+        {
+          title: "Центр поддержки",
+          link: "https://help.netflix.com/",
+          required: true,
+        },
         { title: "Для инвесторов", link: "http://ir.netflix.com/" },
         {
           title: "Правила использования",
           link: "https://help.netflix.com/legal/termsofuse",
+          required: true,
         },
         {
           title: "Корпоративная информация",
           link: "https://help.netflix.com/legal/corpinfo",
+          required: true,
         },
         {
           title: "Юридические уведомления",
@@ -153,6 +155,7 @@ const translation = {
         {
           title: "Конфиденциальность",
           link: "https://help.netflix.com/legal/privacy",
+          required: true,
         },
         {
           title: "Свяжитесь с нами",
@@ -164,6 +167,57 @@ const translation = {
         },
       ],
       copyrigth: "Netflix Азербайджан Создано Vusal Feyruz",
+    },
+    subscribe: {
+      title:
+        "Готовы смотреть? Введите адрес электронной почты, чтобы оформить или возобновить подписку.",
+      form: {
+        placeholder: "Адрес электронной почты",
+        button: "Начать смотреть",
+        errors: {
+          required: "Укажите адрес электронной почты.",
+          validation: "Укажите действительный адрес электронной почты.",
+        },
+      },
+    },
+    loginPage: {
+      heading: "Войти",
+      form: {
+        emailPhoneLabel: "Адрес электронной почты или номер телефона",
+        passwordLabel: "Пароль",
+        errors: {
+          emailPhone: {
+            required:
+              "Укажите действительный адрес электронной почты или номер телефона.",
+            validationEmail: "Укажите действительный адрес электронной почты.",
+            validationPhone: "Укажите действительный номер телефона.",
+          },
+          password: {
+            required: "Ваш пароль должен содержать от 4 до 60 символов.",
+          },
+        },
+        checkboxLabel: "Запомнить меня",
+        needHelp: "Нужна помощь?",
+        button: "Войти",
+      },
+      offerRegister: {
+        title: "Впервые на Netflix?",
+        titleLink: "Зарегистрируйтесь сейчас",
+      },
+      captchaInfo: {
+        title:
+          "Эта страница защищена Google reCAPTCHA, чтобы мы знали, что вы не бот. ",
+        learnMoreBtn: "Подробнее.",
+        learnMore: {
+          firstText:
+            "На информацию, собираемую службой Google reCAPTCHA, распространяются",
+          secondText:
+            "Google. Эта информация используется для предоставления, обслуживания и совершенствования службы reCAPTCHA, а также в целях обеспечения безопасности (для показа персонализированной рекламы Google она не используется).",
+          and: "и",
+          privacyPolicy: "Политика конфиденциальности",
+          termsOfService: "Условия использования",
+        },
+      },
     },
   },
 };

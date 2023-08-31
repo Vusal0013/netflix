@@ -3,7 +3,7 @@ import "./footer.scss";
 import { Language } from "../";
 import { useTranslation } from "react-i18next";
 
-const Footer = () => {
+const Footer = ({ onlyRequierd }) => {
   const { t } = useTranslation();
   const data = t("translation", { returnObjects: true });
 
@@ -17,13 +17,29 @@ const Footer = () => {
         </div>
         <div className="footer__container__content">
           <ul className="footer__container__content__list">
-            {data.footerData.footerContent.map((item, i) => (
-              <li key={i} className="footer__container__content__list__item">
-                <a key={i} href={item.link}>
-                  {item.title}
-                </a>
-              </li>
-            ))}
+            {onlyRequierd
+              ? data.footerData.footerContent
+                  .filter((item) => item.required)
+                  .map((item, i) => (
+                    <li
+                      key={i}
+                      className="footer__container__content__list__item"
+                    >
+                      <a key={i} href={item.link}>
+                        {item.title}
+                      </a>
+                    </li>
+                  ))
+              : data.footerData.footerContent.map((item, i) => (
+                  <li
+                    key={i}
+                    className="footer__container__content__list__item"
+                  >
+                    <a key={i} href={item.link}>
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
           </ul>
         </div>
         <Language />

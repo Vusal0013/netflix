@@ -1,0 +1,35 @@
+@use "../../../sassStyle/variable.scss" as *;
+.button {
+  flex: content;
+  padding: 12px 24px;
+  // margin-left: 1rem;
+
+  cursor: pointer;
+  width: max-content;
+  align-self: center;
+
+  background: $red;
+  color: $white;
+  font-size: 24px;
+
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    background: $red-hover;
+  }
+}
+
+@media screen and (min-width: 599.99px) {
+  .button {
+    min-width: fit-content;
+
+    flex: 1;
+    align-self: flex-start;
+
+    &.subscribe {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+}

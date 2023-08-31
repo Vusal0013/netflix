@@ -8,16 +8,13 @@ import { useTranslation } from "react-i18next";
 const Main = ({ title, paragraph }) => {
   const { t } = useTranslation();
   const data = t("translation", { returnObjects: true });
+
   return (
     <div className="main">
       <div className="main__content">
         <h1>{title}</h1>
         <p>{paragraph}</p>
-        <Subscribe
-          title={data.subscribe.title}
-          placeholder={data.subscribe.placeholder}
-          button={data.subscribe.button}
-        />
+        <Subscribe />
       </div>
       <div className="main__bg-image">
         <img

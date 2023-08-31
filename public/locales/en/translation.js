@@ -18,12 +18,6 @@ const translation = {
         login: "Sign in",
       },
     },
-    subscribe: {
-      title:
-        "Ready to watch? Enter your email to create or restart your membership.",
-      placeholder: "Email adress",
-      button: "Get Started",
-    },
     articles: [
       {
         title: "Enjoy on your TV",
@@ -124,20 +118,37 @@ const translation = {
         link: "https://help.netflix.com/contactus",
       },
       footerContent: [
-        { title: "FAQ", link: "https://help.netflix.com/support/412" },
-        { title: "Media Center", link: "https://media.netflix.com/" },
+        {
+          title: "FAQ",
+          link: "https://help.netflix.com/support/412",
+          required: true,
+        },
+        {
+          title: "Media Center",
+          link: "https://media.netflix.com/",
+        },
         { title: "Ways to Watch", link: "https://www.netflix.com/watch" },
-        { title: "Cookie Preferences", link: "https://www.netflix.com/az/#" },
+        {
+          title: "Cookie Preferences",
+          link: "https://www.netflix.com/az/#",
+          required: true,
+        },
         { title: "Speed Test", link: "https://fast.com/" },
-        { title: "Help Center", link: "https://help.netflix.com/" },
+        {
+          title: "Help Center",
+          link: "https://help.netflix.com/",
+          required: true,
+        },
         { title: "Investor Relations", link: "http://ir.netflix.com/" },
         {
           title: "Terms of Use",
           link: "https://help.netflix.com/legal/termsofuse",
+          required: true,
         },
         {
           title: "Corporate Information",
           link: "https://help.netflix.com/legal/corpinfo",
+          required: true,
         },
         {
           title: "Legal Notices",
@@ -145,7 +156,11 @@ const translation = {
         },
         { title: "Account", link: "https://www.netflix.com/youraccount" },
         { title: "Jobs", link: "https://jobs.netflix.com/jobs" },
-        { title: "Privacy", link: "https://help.netflix.com/legal/privacy" },
+        {
+          title: "Privacy",
+          link: "https://help.netflix.com/legal/privacy",
+          required: true,
+        },
         { title: "Contact Us", link: "https://help.netflix.com/contactus" },
         {
           title: "Only on Netflix",
@@ -153,6 +168,56 @@ const translation = {
         },
       ],
       copyrigth: "Netflix Azerbaijan Created by Vusal Feyruz",
+    },
+    subscribe: {
+      title:
+        "Ready to watch? Enter your email to create or restart your membership.",
+      form: {
+        placeholder: "Email adress",
+        button: "Get Started",
+        errors: {
+          required: "Email is required.",
+          validation: "Please enter a valid email address.",
+        },
+      },
+    },
+    loginPage: {
+      heading: "Sign in",
+      form: {
+        emailPhoneLabel: "Email or phone number",
+        passwordLabel: "Password",
+        errors: {
+          emailPhone: {
+            required: "Please enter a valid email or phone number.",
+            validationEmail: "Please enter a valid email.",
+            validationPhone: "Please enter a valid phone number.",
+          },
+          password: {
+            required: "Your password must contain between 4 and 60 characters.",
+          },
+        },
+        checkboxLabel: "Remember me",
+        needHelp: "Need help?",
+        button: "Sign in",
+      },
+      offerRegister: {
+        title: "New to Netflix?",
+        titleLink: "Sign up now",
+      },
+      captchaInfo: {
+        title:
+          "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
+        learnMoreBtn: "Learn more.",
+        learnMore: {
+          firstText:
+            "The information collected by Google reCAPTCHA is subject to the Google",
+          secondText:
+            ", and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).",
+          and: "and",
+          privacyPolicy: "Privacy Policy",
+          termsOfService: "Terms of Service",
+        },
+      },
     },
   },
 };

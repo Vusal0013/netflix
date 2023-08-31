@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Subscribe, ArticlePartition } from "../";
 
 import "./faq.scss";
@@ -36,11 +36,7 @@ const FAQ = () => {
             />
           ))}
         </div>
-        <Subscribe
-          title={data.subscribe.title}
-          placeholder={data.subscribe.placeholder}
-          button={data.subscribe.button}
-        />
+        <Subscribe />
       </div>
       <ArticlePartition />
     </div>

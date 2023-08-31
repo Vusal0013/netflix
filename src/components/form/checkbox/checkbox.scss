@@ -1,0 +1,39 @@
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 0;
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    &__input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      margin: 0;
+    }
+
+    &__input:focus + &__checkbox {
+      background: #fff;
+    }
+
+    &__checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #737373;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__label__text,
+  &__need-help {
+    user-select: none;
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
